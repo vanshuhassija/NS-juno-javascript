@@ -27,11 +27,11 @@ function proceedToPayment(callback){
 function createOrder(callback){
     setTimeout(()=>{
         console.log("Created Order");
-        callback();
+        // callback();
     },3000)
 }
 
-
+//Blindly trusting on this function that it will execute the function whatever has been passed
 createOrder(function(){
     proceedToPayment(function(){
         showSummary();
@@ -39,4 +39,7 @@ createOrder(function(){
 })
 
 //Callback Hell or Pyramid Of Doom
+
+//2. Inversion of Control 
+
 
